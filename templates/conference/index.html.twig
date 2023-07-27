@@ -8,13 +8,14 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
+    <div class="example-wrapper">
 
-    {% for conference in conferences %}
-        <h4>{{ conference }}</h4>
-        <p>
-            <a href={{ path('conference', { id: conference.id }) }}">View</a>
-        </p>
-    {% endfor %}
-</div>
+        {% for conference in conferences %}
+            <h4>{{ conference }}</h4>
+            <p>
+                <a href={{ path('conference', { slug: conference.slug }) }}">View</a>
+            </p>
+        {% endfor %}
+    </div>
+
 {% endblock %}
